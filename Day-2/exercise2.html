@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <h2
+      class="text-light text-center bg-dark">
+      Challenges of javascript - Day-2
+    </h2>
+    <h3 class="text-light" style="background-color: rgb(206, 166, 117); width: 20rem; margin-top: -0.2em; ">Problems: Exrecise - 2</h3>
+        <ol>
+            <li>Using console.log() print out the following statement: The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.</li>
+            <li>Using cosole.log() print out the following statement: "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."</li>
+            <li>Check if typeof '10' is exactly equal to 10. If not make it exactly equal.</li>
+            <li>Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.</li>
+            <li>Check if 'on' is found in both python and jargon</li>
+            <li>I hope this course is not full of jargon. Check if jargon is in the sentence.</li>
+            <li>Generate a random number between 0 and 100 inclusively.</li>
+            <li>Generate a random number between 50 and 100 inclusively.</li>
+            <li>Generate a random number between 0 and 255 inclusively.</li>
+            <li></li>
+            
+        </ol>
+    <h4 class="text-center text-light bg-success ">All the solutions are in console. Open inspect and navigate to console to see results</h4>
+    <script>
+        let text="The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another."
+        let text2="Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."
+        let a='10'
+        let b = parseInt(a)
+        var floatValue = parseFloat('9.8');
+        var str1 = 'Python'
+        var str2 = 'jargon'
+        var str = 'I hope this course is not full of jargon'
+        var string = 'Javascript'
+        var randomIndex = Math.floor(Math.random() *string.length)
+        var randomCharacter = string[randomIndex];
+        console.log(randomIndex) // generate random index of javascript
+        console.log("Random character:", randomCharacter); //generate random character
+        
+        const randomNo =Math.floor(Math.random() * 101)
+        const no =Math.floor(Math.random() * 51) + 50;
+        const random =Math.floor(Math.random() * 256)
+         
+      
+        
+        console.log(text2)
+        console.log(b===10) // true
+        console.log(Math.round(9.8)) //10
+        console.log(str1,str2.includes('on')) //python true
+        console.log(str2.includes('on')) //true true
+        console.log(str1.includes('on')) //true true
+        console.log(str.includes('jargon')) //TRUE
+        console.log(randomNo )  // geerates random no.
+        console.log(no)
+        console.log(random)  // geerates random no.
+      
+        
+       
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
