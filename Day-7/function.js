@@ -7,7 +7,7 @@
 
 // //2.Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
 // function fullName(fname,lname) {
-  
+
 //     console.log(fname+lname)
 // }
 // fullName("dan","ish")
@@ -35,7 +35,7 @@
 // function perimeterOfRectangle(length,breadth) {
 //     let perimeter = 2*(length+breadth);
 //     console.log(perimeter)
-    
+
 // }
 
 // perimeterOfRectangle(4,5);
@@ -44,7 +44,7 @@
 
 // function volume(l,b,h) {
 //     let v = l*b*h;
-//     console.log(v)    
+//     console.log(v)
 // }
 // volume(4,7,8)
 
@@ -92,7 +92,7 @@
 
 // function convertCelsiusToFahrenheit(c){
 //     let fahrenheit = (c* 9/5)+32
-//     console.log(fahrenheit + " Fahrenheit")    
+//     console.log(fahrenheit + " Fahrenheit")
 //     }
 // convertCelsiusToFahrenheit(10)
 
@@ -106,7 +106,7 @@
 //  function calculateBMI(w,h) {
 //         // limiting  2 digit after decimal
 //         let bmi = parseFloat(w/(h*h)).toFixed(2);
-//         console.log(bmi + " kg/m2") 
+//         console.log(bmi + " kg/m2")
 //     if (bmi<18.5) {
 //         console.log("You are Underwigt")
 //     }
@@ -122,32 +122,127 @@
 //  }
 // calculateBMI(50,1.6)
 
-// 14. Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+// // 14. Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
 
-function checkSeason(month) {
-    switch(month.toLowerCase()){
-        case 'december':
-        case 'january':
-        case 'february':
-            return 'winter';
-        
-        case 'march':
-        case 'april':
-        case 'may':
-            return 'summer';
-        
-        case 'june':
-        case 'july':
-        case 'august':
-            return 'monsoon';
-        
-        case 'september':
-        case 'october':
-        case 'november':
-            return 'spring';
+// function checkSeason(month) {
+//     switch(month.toLowerCase()){
+//         case 'december':
+//         case 'january':
+//         case 'february':
+//             return 'winter';
 
-        default:
-            return 'invalid month'
-    }
-}
-console.log(checkSeason('May'))
+//         case 'march':
+//         case 'april':
+//         case 'may':
+//             return 'summer';
+
+//         case 'june':
+//         case 'july':
+//         case 'august':
+//             return 'monsoon';
+
+//         case 'september':
+//         case 'october':
+//         case 'november':
+//             return 'spring';
+
+//         default:
+//             return 'invalid month'
+//     }
+// }
+// console.log(checkSeason('May'))
+
+// // 15.Math.max returns its largest argument. Write a function findMax that takes three arguments and returns their maximum with out using Math.max method.
+
+// function findMax(a,b,c){
+//   if(a>b && a>c){
+//     return a;
+//   }
+// else if (b>a && b>c) {
+//     return b;
+// }
+
+// else if (c>a && c>b) {
+//     return c;
+// }
+// }
+// console.log(findMax(0, -10, -2))
+
+/*  Exercises: Level 2 */
+// // 1.Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+
+// function solveLinEquation({x=null,y=null}={}) {
+//     if(x == null && y == null){
+//         throw new Error("at least provide x or y")
+//     }
+//     // Example linear equation: 2x + 3y = 6
+//     const a = 2;
+//     const b = 3;
+//     const c = 6;
+//    if (x !== null) {
+//         // Solve for y: 3y = 6 - 2x
+//         const y = (c - a * x) / b;
+//         return { x, y };
+//     }
+
+//     if (y !== null) {
+//         // Solve for x: 2x = 6 - 3y
+//         const x = (c - b * y) / a;
+//         return { x, y };
+//     }
+// }
+
+// console.log(solveLinEquation({ x: 1 })); // Should output: { x: 1, y: 4/3 }
+// console.log(solveLinEquation({ y: 1 })); // Should output: { x: 3/2, y: 1 }
+
+// // 2.Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+
+// function solveQuadratic(a,b,c) {
+//     // Example quadratic equation: 2x + 3y = 6
+//     let discriminant = (b*b)-(4*a*c);
+//     if (discriminant>0) {
+//         let x1= (-b+(Math.sqrt(discriminant)))/(2*a);
+//         let x2 = (-b-(Math.sqrt(discriminant)))/(2*a);
+//         console.log(`Two distinct real roots: x1 = ${x1}, x2 = ${x2}`);
+//     }
+//     else if (discriminant==0) {
+//         let x = -b / (2 * a);
+//         console.log(`One real root: x = ${x}`);
+//     }
+//     else{
+//         console.log("discriminant is negative, there are no real roots (only complex roots).")
+//     }
+// }
+// solveQuadratic(1, 4, 4) // {-2}
+// solveQuadratic(1, -1, -2) // {2, -1}
+// solveQuadratic(1, 7, 12) // {-3, -4}
+// solveQuadratic(1, 0, -4)//{2, -2}
+// solveQuadratic(1, -1, 0) //{1, 0}
+
+// // 3. Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+
+// function printArray(array){
+//     array.forEach(value => console.log(value))
+// }
+// printArray(['shifa', 'Rabiya','Saheefa','Alfiya', 'nazzu', 'inshara'])
+
+// //4. Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+// // showDateTime()
+// // 08/01/2020 04:08
+
+// function showDateTime() {
+//   const date = new Date();
+//   const formatter = new Intl.DateTimeFormat("en-GB", {
+//     day: "2-digit",
+//     month: "2-digit",
+//     year: "2-digit",
+//     hour: "2-digit",
+//     minute: "2-digit",
+//     hour12:true
+//   });
+//   const formattedDate = formatter.format(date);
+//   console.log(formattedDate);
+// }
+// showDateTime();
+
+
