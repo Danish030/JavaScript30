@@ -245,4 +245,169 @@
 // }
 // showDateTime();
 
+// // 5.Declare a function name swapValues. This function swaps value of x to y.
+
+// /* functions parameters should nnot declared like let a; */
+// function swapValues(a,b) {
+//    let temp = a;
+//    a = b;
+//    b = temp;
+//    console.log(a,b)
+// }
+// swapValues(3, 4) // x => 4, y=>3
+// swapValues(4, 5) // x = 5, y = 4
+
+// // 6. Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+
+// function reverseArray(arr){
+// let start = 0;
+// let end = arr.length-1
+// while (start<end) {
+//     let temp =  arr[start];
+//     arr[start] = arr[end];
+//      arr[end] = temp;
+//     start+=1;
+//     end-=1
+// }
+// return arr;
+// }
+// console.log(reverseArray([1, 2, 3, 4, 5]))
+// console.log(reverseArray(['A', 'B', 'C']))
+
+// // 8. Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+
+// function capitalizeArray(arr){
+//     const capitalizedarray = []
+//     for (let i = 0; i < arr.length; i++) {
+//         if(typeof(arr[i]) === 'string'){
+//             capitalizedarray.push(arr[i].toUpperCase());
+//         }
+//         else{
+//             console.log("it is not string of array")
+//         }
+//     }
+//     return capitalizedarray;
+// }
+
+// console.log(capitalizeArray(['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']))
+
+// // 8. Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+
+// let arr = []
+// function addItem(item) {
+//     arr.push(item)
+// return arr;
+// }
+
+// console.log(addItem('five'))
+// console.log(addItem('danish'))
+// console.log(addItem(9))
+
+// // 9. Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+// const arr = ['Danish', 'ansari','jjk','aott']
+// console.log(arr)
+// function removeItem(index) {
+//     if(index>=0 && index < arr.length){
+//      arr.splice(index,1)
+//     }
+//     return arr // Return the modified same  array after removing the item
+// }
+// console.log(removeItem(1));
+
+// // 10. Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+
+// const sumOfNumbers = (n) => {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++) {
+//     sum += i;
+//   }
+//   return sum;
+// };
+// console.log(sumOfNumbers(5));
+
+// // 11. Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+
+// const sumOfodds = (n) => {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 2 != 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// };
+// console.log(sumOfodds(5));
+
+// // 12. Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+
+// const sumOfEven = (n) => {
+//   let sum = 0;
+//   for (let i = 1; i <= n; i++) {
+//     if (i % 2 == 0) {
+//       sum += i;
+//     }
+//   }
+//   return sum;
+// };
+// console.log(sumOfEven(5));
+
+// // 13.Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+// // evensAndOdds(100);
+// // The number of odds are 50.
+// // The number of evens are 51.
+
+// const evensAndOdds = (n) => {
+//   let even=0 ;
+//   let odd=0 ;
+//   for (let i = 0; i <= n; i++) {
+//     if (i % 2 == 0) {
+//       even+=1;
+//     }
+//     else if (i % 2 != 0) {
+//       odd+=1;
+//     }
+//   }
+//   return `The number of odds are ${odd}. \nThe number of evens are ${even}.`;
+// };
+// console.log(evensAndOdds(100));
+
+// // 14. Write a function which takes any number of arguments and return the sum of the arguments
+
+// const sumOfNumbers = (...args) =>{
+//     let sum = 0;
+//     for (const num of args) {
+//         sum+=num;
+//     }
+//     return sum;
+// }
+// console.log(sumOfNumbers(1, 2, 3)) // -> 6
+// console.log(sumOfNumbers(1, 2, 3, 4)) // -> 10
+
+// //15. Writ a function which generates a randomUserIp
+// //192.168.0.107
+
+// const randomUserIp = () => {
+//   const minCeiled = Math.ceil(0);
+//   const maxFloored = Math.floor(255);
+//   let first = Math.floor(
+//     Math.random() * (maxFloored - minCeiled + 1) + minCeiled
+//   );
+//   let second = Math.floor(
+//     Math.random() * (maxFloored - minCeiled + 1) + minCeiled
+//   );
+//   let third = Math.floor(
+//     Math.random() * (maxFloored - minCeiled + 1) + minCeiled
+//   );
+//   let forth = Math.floor(
+//     Math.random() * (maxFloored - minCeiled + 1) + minCeiled
+//   );
+
+//   console.log(first + "." + second + "." + third + "." + forth);
+// };
+
+// randomUserIp();
+
+// 16.Write a function which generates a randomMacAddress
+// 80-A5-89-17-5B-DE
 
