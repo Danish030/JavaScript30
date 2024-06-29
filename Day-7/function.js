@@ -408,6 +408,87 @@
 
 // randomUserIp();
 
-// 16.Write a function which generates a randomMacAddress
-// 80-A5-89-17-5B-DE
+// // 16.Write a function which generates a randomMacAddress
+// // 80-A5-89-17-5B-DE
+
+// const randomMacAddress = () => {
+//     const hexDigits = '0123456789ABCDEF';
+//     let macAddress = '';
+
+//     for (let i = 0; i < 6; i++) { // Outer loop to generate 6 pairs
+//       let pair = '';
+//       for (let j = 0; j < 2; j++) { // Inner loop to generate each pair
+//         let randomIndex = Math.floor(Math.random() * 16);
+//         pair += hexDigits[randomIndex];
+//       }
+//       macAddress += pair;
+//       if (i < 5) macAddress += ':'; // Add a colon after each pair except the last one
+//     }
+
+//     return macAddress;
+//   }
+
+//   console.log(randomMacAddress()); // Output: A random MAC address like "AB:CD:EF:12:34:56"
+
+// // 17.Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+
+// const randomHexaNumberGenerator = () => {
+//   const hexDigits = "0123456789abcdef";
+//   let hexNumber = "#";
+//   for (let i = 0; i < 6; i++) {
+//     let random = Math.floor(Math.random() * 16);
+//     hexNumber += hexDigits[random];
+//   }
+//   return hexNumber;
+// };
+
+// console.log(randomHexaNumberGenerator());
+
+// // 18. Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id
+
+// const userIdGenerator = () => {
+//   const data = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+//   let id = '';
+//   for (let i = 0; i < 7; i++) {
+//     let randomId = Math.floor(Math.random() * data.length)
+//     id+=data[randomId]
+
+//   }
+//   return id
+// };
+// console.log(userIdGenerator())
+
+/* Exercises: Level 3 */
+
+// // 1. Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+// const userIdGeneratorbyUser = () => {
+//   let lengthid = Number(prompt("length of id", ""));
+//   let noId = Number(prompt("number of ids", ""));
+
+//   const data = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+//   for (let i = 0; i < noId; i++) {
+//     let id = "";
+//     for (let j = 0; j < lengthid; j++) {
+//       let randomId = Math.floor(Math.random() * data.length);
+//       id += data[randomId];
+//     }
+//     console.log(id);
+//     // mistake making here that console id should be in outer loop to print as many times i nedd to print ids
+//   }
+// };
+// userIdGeneratorbyUser();
+
+// 2. Write a function name rgbColorGenerator and it generates rgb colors.
+
+const rgbColorGenerator = () => {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  //console.log("rgb(" + r + ','+ g + ',' + b + ")")
+  console.log(`rgb(${r},${g},${b})`);
+};
+rgbColorGenerator();
+
 
