@@ -482,13 +482,48 @@
 
 // 2. Write a function name rgbColorGenerator and it generates rgb colors.
 
-const rgbColorGenerator = () => {
-  let r = Math.floor(Math.random() * 255);
-  let g = Math.floor(Math.random() * 255);
-  let b = Math.floor(Math.random() * 255);
-  //console.log("rgb(" + r + ','+ g + ',' + b + ")")
-  console.log(`rgb(${r},${g},${b})`);
-};
-rgbColorGenerator();
+// const rgbColorGenerator = () => {
+//   let r = Math.floor(Math.random() * 255);
+//   let g = Math.floor(Math.random() * 255);
+//   let b = Math.floor(Math.random() * 255);
+//   //console.log("rgb(" + r + ','+ g + ',' + b + ")")
+//   console.log(`rgb(${r},${g},${b})`);
+// };
+// rgbColorGenerator();
 
+// // 3.Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
 
+// const arrayOfHexaColors = (numofColors) => {
+//   let colors = [];
+//   for (let i = 0; i < numofColors; i++) {
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     let r1 = r.toString(16).padStart(2,"0")
+//     let g1 = g.toString(16).padStart(2,"0")
+//     let b1 = b.toString(16).padStart(2,"0")
+//     let hexColor = `#${r1}${g1}${b1}`;
+//     colors.push(hexColor);
+
+//   }
+//   return colors;
+// };
+// console.log(arrayOfHexaColors(5))
+
+// //3.Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+
+// const arrayOfRgbColors = (n) =>{
+//   let rgbColor = []
+//    for (let i = 0; i < n; i++) {
+//     let r = Math.floor(Math.random() * 256);
+//     let g = Math.floor(Math.random() * 256);
+//     let b = Math.floor(Math.random() * 256);
+//     let rgb = `rgb(${r},${g},${b})`;
+//     rgbColor.push(rgb)
+//    }
+//    return rgbColor;
+// }
+
+// console.log(arrayOfRgbColors(5)) 
+
+// 4. Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
