@@ -20,7 +20,7 @@ const products = [
 
 // 2. Define a callback function before you use it in forEach, map, filter or reduce.
 
-function callback(element, index, array) {}
+// function callback(element, index, array) {}
 
 // 3. Use forEach to console.log each country in the countries array.
 
@@ -79,3 +79,68 @@ console.log(findE)
 
 const arraywithprice = products.filter((prices) => prices.price != null)
 console.log(arraywithprice)
+
+//16. Declare a function called getStringLists which takes an array as a parameter and then returns an array only with string items.
+
+const stringArray = ['hello', 'world', 1, 2, 3, 'hello', 'world']
+const getStringLists = (array) => {
+    return array.filter((string) => typeof string === 'string')
+}
+console.log(getStringLists([1,2,3,'hello','world']))
+
+// 17. Use reduce to sum all the numbers in the numbers array.
+const sumofnumbers = numbers.reduce( (acc, curr) => acc + curr,0)
+
+console.log(sumofnumbers);
+
+
+const total = numbers.reduce( function(acc, curr) {
+    return acc + curr
+},0)
+console.log(total)
+
+// 18. Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
+
+const sentence = countries.reduce( (acc,curr) => {
+  return acc+"," +curr})
+  console.log(sentence);
+
+// 19.Explain the difference between some and every
+//   some: Check if some of the elements are similar in one aspect. It returns boolean
+//   every: Check if all the elements are similar in one aspect. It returns boolean
+
+//20.Use some to check if some names' length greater than seven in names array
+const checkName7= names.some((name) => name.length>7)
+console.log(checkName7);
+
+//21. Use every to check if all the countries contain the word land
+
+const checkLandContains = countries.every((country) => country.includes('land'))
+console.log(checkLandContains); //false due to all array elements are not containing land
+
+//22. Explain the difference between find and findIndex.
+// find: Return the first element which satisfies the condition
+// findIndex: Return the index of the first element which satisfies the condition
+// 23. Use find to find the first country containing only six letters in the countries array
+const findCountry6 = countries.find((country) => country.length>6)
+console.log(findCountry6);
+
+//24.Use findIndex to find the position of the first country containing only six letters in the countries array
+
+const findCountry = countries.findIndex((country) => country.length > 6);
+console.log(findCountry);
+
+//25.Use findIndex to find the position of Norway if it doesn't exist in the array you will get -1.
+
+const findNorway = countries.findIndex((norway)=> norway.includes("Norway"))
+console.log(findNorway);
+
+
+//26. Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1
+
+const findRussia = countries.findIndex((russia) => russia.includes("Russia"))
+console.log(findRussia);
+
+
+
+
